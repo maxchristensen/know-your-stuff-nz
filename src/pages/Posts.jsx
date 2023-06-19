@@ -10,7 +10,7 @@ const Posts = () => {
     const [posts, setPosts] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const endpoint = `${baseUrl}/posts?_embed`
+    const endpoint = `${baseUrl}/stories`
 
     useEffect(() => {
         axios.get(`${endpoint}`)
@@ -24,14 +24,14 @@ const Posts = () => {
 
     const AllPosts = ( {posts} ) => {
         // console.log({posts})
-        const mappedPosts = posts.map((post, index) => {
+        const mappedPosts = posts.map((story, index) => {
             return (
-                <div className="post-container" key={post.slug + "-" + index}>
-                    <h4 className='title'>{post.title.rendered}</h4>
-                    <div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
-                    <div>Key: {post.slug + "-" + index}</div>
-                    <li key={post.slug + "-" + index}>
-                        <a href={`#/post/${post.id}`}>Read More...</a>
+                <div className="post-container" key={story.slug + "-" + index}>
+                    <h4 className='title'>{story.title.rendered}</h4>
+                    <div dangerouslySetInnerHTML={{__html: story.excerpt?.rendered}} />
+                    <div>Key: {story.slug + "-" + index}</div>
+                    <li key={story.slug + "-" + index}>
+                        <a href={`#/stories/${story.id}`}>Read More...</a>
                     </li>
                 </div>
             )

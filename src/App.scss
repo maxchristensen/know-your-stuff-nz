@@ -10,12 +10,44 @@ $green: #417B5A;
 /* Adding fonts to headings and body copy */
 * {
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Archivo', sans-serif;
+}
+
+h1 {
+  font-size: 64pt;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 48pt;
+  color: $orange;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 36pt;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 28pt;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 24pt;
+  font-weight: 500;
+}
+
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18pt;
 }
 
 /* Styling for the header */

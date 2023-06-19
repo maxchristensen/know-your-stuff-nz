@@ -4,7 +4,6 @@ import './App.scss'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Links from './components/Links'
-import Post from './components/Post'
 
 function App() {
 
