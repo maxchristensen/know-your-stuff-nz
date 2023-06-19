@@ -35,7 +35,7 @@ const Storefront = () => {
                 <Link className="product-link" to={`/product/${product.id}`} >
                     <h4 className="name">{product.name}</h4>
                 </Link>
-                <h3 className="name">${product.prices.price} {product.prices.currency_code}</h3>
+                <h3 className="name">${product.prices.price/100} {product.prices.currency_code}</h3>
 
             </div>
             )

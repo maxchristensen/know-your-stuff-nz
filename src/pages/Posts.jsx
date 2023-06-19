@@ -29,10 +29,7 @@ const Posts = () => {
                 <div className="post-container" key={story.slug + "-" + index}>
                     <h4 className='title'>{story.title.rendered}</h4>
                     <div dangerouslySetInnerHTML={{__html: story.excerpt?.rendered}} />
-                    <div>Key: {story.slug + "-" + index}</div>
-                    <li key={story.slug + "-" + index}>
                         <a href={`#/stories/${story.id}`}>Read More...</a>
-                    </li>
                 </div>
             )
         })
