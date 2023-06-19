@@ -6,14 +6,14 @@ import { useParams } from 'react-router-dom';
 const Post = () => {
 
     const baseUrl = import.meta.env.VITE_WP_API_BASEURL
-    console.log(baseUrl);
+    // console.log(baseUrl);
     
     const { id } = useParams()
     
     const [post, setPost] = useState(null)
     const [loading, setLoading] = useState(true)
     
-    const endpoint = `${baseUrl}/posts/${id}?_embed`
+    const endpoint = `${baseUrl}/stories/${id}`
     
     useEffect(() => {
         axios.get(`${endpoint}`)

@@ -29,11 +29,13 @@ const Header = () => {
               <li><Link to="/">Who We Are</Link></li>
             </ul>
           </li>
-          <li><Link to="/posts">What's Happening</Link></li>
+          <li><Link to="/stories">What's Happening</Link></li>
           <li><Link to="/">Resources</Link></li>
           <li><Link to="/">Your Privacy</Link></li>
         </ul>
-        <button className="button">DONATE</button>
+        <Link to="/storefront">
+          <button className="button">DONATE</button>
+        </Link>
       </nav>
     </header>
   );
