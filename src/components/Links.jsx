@@ -6,6 +6,7 @@ import Home from '../pages/Home'
 import Posts from '../pages/Posts'
 import Storefront from '../pages/Shop/Storefront'
 import StaffMembers from '../pages/StaffMembers'
+import PillLibrary from '../pages/PillLibrary'
 
 // Component import
 import Post from './Post'
@@ -19,7 +20,9 @@ const Links = () => {
         <Route path="/stories/:id" element={<Post />} />
         <Route path="storefront" element={<Storefront />} />
         <Route path="product/:id" element={<Product />} />
-        <Route path='/who-we-are' element={<StaffMembers />}></Route>
+        <Route path='/who-we-are' element={<StaffMembers />} />
+        <Route path='/resources' element={<PillLibrary />} />
+
     </Routes>
   )
 }
