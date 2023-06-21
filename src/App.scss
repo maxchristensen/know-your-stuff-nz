@@ -9,15 +9,23 @@ $green: #417B5A;
 
 /* Adding fonts to headings and body copy */
 * {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Archivo', sans-serif;
+body {
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Archivo', sans-serif;
 }
 
 h1 {
@@ -51,6 +59,18 @@ h6 {
   font-size: 18pt;
 }
 
+.width-50 {
+  width: 40%;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
 /* Styling for the header */
 .header {
   position: sticky;
@@ -62,6 +82,7 @@ h6 {
   padding: 10px;
   background-color: $black;
   color: $white;
+  margin-bottom: 50px;
 }
 
 #b {
@@ -182,8 +203,10 @@ h6 {
   .nav.open .links {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the links horizontally */
-    justify-content: center; /* Center the links vertically */
+    align-items: center;
+    /* Center the links horizontally */
+    justify-content: center;
+    /* Center the links vertically */
     position: absolute;
     top: 100px;
     left: 0;
@@ -202,84 +225,107 @@ h6 {
 
 // Footer Styling
 #contact-container {
-padding: 40px;
-width: 100%;
-height: 35vh;
-background-color: $green;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  padding: 40px;
+  width: 100%;
+  height: 35vh;
+  background-color: $green;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
-.short-field::placeholder, .long-field::placeholder {
-padding-left: 5px;
-font-weight: 400;
-color: $black;
+.short-field::placeholder,
+.long-field::placeholder {
+  padding-left: 5px;
+  font-weight: 400;
+  color: $black;
 }
 
 .long-field::placeholder {
-padding-top: 5px;
+  padding-top: 5px;
 }
 
 
 .contact-heading {
-color: $white;
-font-size: 24pt;
-margin-bottom: 10px;
+  color: $white;
+  font-size: 24pt;
+  margin-bottom: 10px;
 }
 
-.short-field, .long-field {
-background-color: $white;
-border: none;
-width: 15vw;
+.short-field,
+.long-field {
+  background-color: $white;
+  border: none;
+  width: 15vw;
 }
 
 .short-field {
-height: 4vh;
-margin-bottom: 10px;
+  height: 4vh;
+  margin-bottom: 10px;
 }
 
 .long-field {
-height: 7vh;
-margin-bottom: 5px;
+  height: 7vh;
+  margin-bottom: 5px;
 }
 
 .contact-submit {
-background-color: $black;
-color: $white;
-border: none;
-width: 100%;
-height: 50px;
-font-weight: 700;
-margin-bottom: 10px;
-transition: all 0.5s ease;
+  background-color: $black;
+  color: $white;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
 }
 
 .contact-submit:hover {
-background-color: $orange;
-cursor: pointer;
-transition: all 0.5s ease;
+  background-color: $orange;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 
 .socials-heading {
-color: $white;
-font-size: 18px;
-font-weight: 600;
-margin-bottom: 7px;
-text-align: center;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  text-align: center;
 }
 
 .social-icons {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
 }
 
 .socials {
-width: 2vw;
+  width: 2vw;
+}
+
+// Staff Members Styling
+.staff-members-container {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100vw;
+}
+  
+.staff-container {
+display: flex;
+justify-content: center;
+width: 80vw;
+}
+
+.staff-image {
+  width: 250px;
 }
