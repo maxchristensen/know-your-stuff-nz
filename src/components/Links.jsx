@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import Posts from '../pages/Posts'
 import Storefront from '../pages/Shop/Storefront'
+import StaffMembers from '../pages/StaffMembers'
 
 // Component import
 import Post from './Post'
@@ -18,6 +19,7 @@ const Links = () => {
         <Route path="/stories/:id" element={<Post />} />
         <Route path="storefront" element={<Storefront />} />
         <Route path="product/:id" element={<Product />} />
+        <Route path='/who-we-are' element={<StaffMembers />}></Route>
     </Routes>
   )
 }
