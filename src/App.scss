@@ -13,6 +13,7 @@ $green: #417B5A;
     font-weight: 300;
     margin: 0;
     padding: 0;
+    letter-spacing: 0.5px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -52,150 +53,233 @@ h6 {
 
 /* Styling for the header */
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: $black;
-    color: $white;
-  }
-  
-  #b {
-    height: 40px;
-    fill: $white;
-    transition: all 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $black;
+  color: $white;
+}
+
+#b {
+  height: 40px;
+  fill: $white;
+  transition: all 0.5s ease;
+}
+
+#b:hover {
+  fill: $orange;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: $black;
+  margin: 5px 0;
+  transition: transform 0.3s;
+}
+
+.open .hamburger:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open .hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.open .hamburger:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: $white;
+  transition: all 0.5s ease;
+}
+
+.links a:hover {
+  color: $orange;
+  transition: all 0.5s ease;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $green;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  color: $white;
+  font-weight: 600;
+  background-color: $orange;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  padding: 10px 20px;
+  color: #f4f5f5;
+  font-weight: 600;
+  background-color: $green;
+  transition: all 0.5s ease;
+}
+
+/* Media Query for Mobile Screen Sizes */
+@media (max-width: 768px) {
+  .nav .links {
+    display: none;
   }
 
-  #b:hover {
-    fill: $orange;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  
   .menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: $black;
-    margin: 5px 0;
-    transition: transform 0.3s;
-  }
-  
-  .open .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .open .hamburger:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .open .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  .links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .links a {
-    text-decoration: none;
-    color: $white;
-    transition: all 0.5s ease;
-  }
-
-  .links a:hover {
-    color: $orange;
-    transition: all 0.5s ease;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: $green;
-    padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown:hover .dropdown-menu {
     display: block;
   }
-  
-  .dropdown-menu li {
-    margin-bottom: 5px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    color: $white;
-    font-weight: 600;
-    background-color: $orange;
-    border: none;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: all 0.5s ease;
-  }
-  
-  .button:hover {
-    padding: 10px 20px;
-    color: #f4f5f5;
-    font-weight: 600;
-    background-color: $black;
-    transition: all 0.5s ease;
+
+  .hamburger {
+    background-color: $white;
   }
 
-  /* Media Query for Mobile Screen Sizes */
-  @media (max-width: 768px) {
-    .nav .links {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-
-    .hamburger {
-      background-color: $white;
-    }
-  
-    .nav.open .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the links horizontally */
-      justify-content: center; /* Center the links vertically */
-      position: absolute;
-      top: 100px;
-      left: 0;
-      background-color: $white;
-      width: 100%;
-      padding: 20px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-  
-    .nav.open .links li a {
-      margin-bottom: 10px;
-      color: $black;
-
-    }
+  .nav.open .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the links horizontally */
+    justify-content: center; /* Center the links vertically */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: $white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
+  .nav.open .links li a {
+    margin-bottom: 10px;
+    color: $black;
+
+  }
+}
+
+// Footer Styling
+#contact-container {
+padding: 40px;
+width: 100%;
+height: 35vh;
+background-color: $green;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.short-field::placeholder, .long-field::placeholder {
+padding-left: 5px;
+font-weight: 400;
+color: $black;
+}
+
+.long-field::placeholder {
+padding-top: 5px;
+}
+
+
+.contact-heading {
+color: $white;
+font-size: 24pt;
+margin-bottom: 10px;
+}
+
+.short-field, .long-field {
+background-color: $white;
+border: none;
+width: 15vw;
+}
+
+.short-field {
+height: 4vh;
+margin-bottom: 10px;
+}
+
+.long-field {
+height: 7vh;
+margin-bottom: 5px;
+}
+
+.contact-submit {
+background-color: $black;
+color: $white;
+border: none;
+width: 100%;
+height: 50px;
+font-weight: 700;
+margin-bottom: 10px;
+transition: all 0.5s ease;
+}
+
+.contact-submit:hover {
+background-color: $orange;
+cursor: pointer;
+transition: all 0.5s ease;
+}
+
+
+.socials-heading {
+color: $white;
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 7px;
+text-align: center;
+}
+
+.social-icons {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 20px 0 20px;
+}
+
+.socials {
+width: 2vw;
+}
