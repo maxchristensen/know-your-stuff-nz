@@ -52,18 +52,24 @@ const Storefront = () => {
         // console.log(donations);
         const mappedDonations = donations.map((donation, index) => {
             return (
-                <div className="product-container item-container" key={index}>
+                <div className="donation" key={index}>
                     <Link className="product-link" to={`/product/${donation.id}`} >
-                        <h4 className="name">{donation.name}</h4>
+                        <h4 className="donation-name">{donation.name}</h4>
                     </Link>
-                    <h3 className="name">${donation.prices.regular_price/100} {donation.prices.currency_code}</h3>
                 </div>
                 )
         })
 
             return(
                 <>
-                {mappedDonations}
+                <div className="donation-container">
+                    <div className="donation-blurb">
+                        <p>KnowYourStuffNZ is a not-for-profit social enterprise and is run entirely by volunteers, some putting in up to 20 hours a week. Our aim is for the service to always be free of charge to clients – your donation will help to do this by covering our ongoing expenses.
+                        <br /><br />
+                        While we receive considerable logistical help and support from New Zealand Drug Foundation, we have been unfunded since our inception. As demand for our service has increased, so have running costs – your donation will help KnowYourStuffNZ remain sustainable into the future.</p>
+                    </div>
+                    {mappedDonations}
+                </div>
                 </>
             )
     }
@@ -81,7 +87,7 @@ const Storefront = () => {
 
             return (
             <div className="product-container item-container" key={index}>
-                <img className="product-Image" src={getFeaturedImage(product)} alt="Product Image" />
+                <img className="product-image" src={getFeaturedImage(product)} alt="Product Image" />
                 <Link className="product-link" to={`/product/${product.id}`} >
                     <h4 className="name">{product.name}</h4>
                 </Link>
@@ -102,7 +108,7 @@ const Storefront = () => {
 
     return (
         <div id="shop-page" className="container">
-            <h2>Shop</h2>
+            <h2>Donate!</h2>
             <div id="product-grid" className="grid-container">
             {loading ? <p>Loading</p> : <>
             <Donations/>
