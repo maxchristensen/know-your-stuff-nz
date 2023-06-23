@@ -25,7 +25,7 @@ const Posts = () => {
     
 
 
-    const AllPosts = ( {posts} ) => {
+    const AllPosts = ( {posts} ) => {        
         // console.log({posts})
         const mappedPosts = posts.map((story, index) => {
             function getFeaturedImage(story) {
@@ -38,9 +38,10 @@ const Posts = () => {
             return (
                 <div className="post-container width-33" key={story.slug + "-" + index}>
                     <img className="story-image" src={getFeaturedImage(story)} alt={story.title.rendered} />
-                    <h4 className='title'>{story.title.rendered}</h4>
+                    <a href={`#/stories/${story.id}`}>
+                    <h4 className='story-title'>{story.title.rendered}</h4>
+                    </a>
                     <div dangerouslySetInnerHTML={{__html: story.excerpt?.rendered}} />
-                        <a href={`#/stories/${story.id}`}>Read More...</a>
                 </div>
             )
         })
@@ -60,7 +61,7 @@ const Posts = () => {
 
   return (
     <>
-    <div className="container">
+    <div className="whats-happening-container">
         <h2 className='latest-news-heading'>Latest News!</h2>
         <div className="homeCont">
             {loading ? <p>Loading...</p> : <AllPosts posts={posts} />}

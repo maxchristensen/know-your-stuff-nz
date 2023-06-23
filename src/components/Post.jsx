@@ -32,11 +32,10 @@ const Post = () => {
         
 
     return (
-        <div className='container'>
-           <div key={post.slug} className="post-container">
-               <h4 className="title">{post.title.rendered}</h4>
-               <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-               <div>Key: {post.slug}</div>
+        <div className='single-post-container'>
+           <div key={post.slug} className="story-container">
+               <h4 className="post-title">{post.title.rendered}</h4>
+               <div className='post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
            </div>
          </div>
       );

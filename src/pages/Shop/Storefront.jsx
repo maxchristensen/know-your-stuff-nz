@@ -87,11 +87,16 @@ const Storefront = () => {
 
             return (
             <div className="product-container item-container" key={index}>
-                <img className="product-image" src={getFeaturedImage(product)} alt="Product Image" />
-                <Link className="product-link" to={`/product/${product.id}`} >
-                    <h4 className="name">{product.name}</h4>
-                </Link>
-                <h3 className="name">${product.prices.regular_price/100} {product.prices.currency_code}</h3>
+                <div className="product-image-container">
+                    <img className="product-image" src={getFeaturedImage(product)} alt="Product Image" />
+                </div>
+                <div className="product-info-container">
+                    <Link className="product-link" to={`/product/${product.id}`} >
+                        <h4 className="name">{product.name}</h4>
+                    </Link>
+                    <p className="product-price">${product.prices.regular_price/100} {product.prices.currency_code}</p>
+                    <button className='atc-button'>ADD TO CART</button>
+                </div>
             </div>
             )
         })
@@ -108,10 +113,33 @@ const Storefront = () => {
 
     return (
         <div id="shop-page" className="container">
-            <h2>Donate!</h2>
+            <h2 className='donate-heading'>Donate!</h2>
             <div id="product-grid" className="grid-container">
             {loading ? <p>Loading</p> : <>
             <Donations/>
+
+            <div className="why-donate-section">
+            <p>You can donate to us using a credit or debit card, or by bank transfer. If you would like to continually support our work with a regular donation, the best way to do this is to set up an automatic payment through online banking.</p>
+            <h3 className='product-blurb-heading'>NZ bank account details:</h3>
+            <p><br />Account name: KNOWYOURSTUFFNZ CHARITABLE TRUST<br />Account number: 06-0606-0893413-00<br />SWIFT code: ANZBNZ22 (for international donations)<br />
+            * If you are making a bank deposit and need a receipt for tax purposes, please use the contact page to let us know, as these are not automatically issued and we’ll need your contact details to send it.<br/><br/></p>
+            <h3 className='product-blurb-heading'>Why donate?</h3>
+            <p>
+            KnowYourStuffNZ is a not-for-profit social enterprise and is run entirely by volunteers, some putting in up to 20 hours a week. Our aim is for the service to always be free of charge to clients – your donation will help to do this by covering our ongoing expenses.
+            <br/><br/>
+            While we receive considerable logistical help and support from New Zealand Drug Foundation, we have been unfunded since our inception. As demand for our service has increased, so have running costs – your donation will help KnowYourStuffNZ remain sustainable into the future.<br/><br/>
+            </p>
+            <p><b>Costs your donation will help cover include:</b></p>
+            <ul>
+                <li>travel to events</li>
+                <li>consumables such as reagents, cleaning gear, printing, posters, volunteer t-shirts</li>
+                <li>this website and other costs of publicising our data</li>
+                <li>purchase of assets to replace those currently borrowed and replacement of owned assets as they wear out – laptops, solar power setup, tents, chairs, tables etc</li>
+                <li>eventually, purchase of new assets such as another spectrometer</li><br /><br />
+            </ul>
+            <h2 className='thank-you'>Thank You.</h2><br /><br />
+            </div>
+
             <Products />
             
             </>}

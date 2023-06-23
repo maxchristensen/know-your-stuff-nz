@@ -32,10 +32,12 @@ const PillLibrary = () => {
             }
 
             return (
-                <div className="post-container" key={pill.slug + "-" + index}>
+                <div className="pill-container" key={pill.slug + "-" + index}>
                     <img className="pill-image" src={getFeaturedImage(pill)} alt="pill Member Image" />
-                    <h4 className='title'>{pill.title.rendered}</h4>
-                    <div dangerouslySetInnerHTML={{__html: pill.content?.rendered}} />
+                    <div className="pill-library-info">
+                        <h4 className='pill-title'>{pill.title.rendered}</h4>
+                        <div className='pill-description' dangerouslySetInnerHTML={{__html: pill.content?.rendered}} />
+                    </div>
                 </div>
             )
         })
@@ -50,8 +52,10 @@ const PillLibrary = () => {
 
     return (
     <>
-            {loading ? <p>Loading...</p> : <AllPills pills={pills} />}
-
+    <h3 className='pill-library-heading'>Pill Library</h3>
+    <div className="pill-library-container">
+    {loading ? <p>Loading...</p> : <AllPills pills={pills} />}
+    </div>
     </>
     )
 }

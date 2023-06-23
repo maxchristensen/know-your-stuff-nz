@@ -117,7 +117,7 @@ const ContactForm = () => {
 const Footer = () => {
     return (
         <div id="contact-container" className="container">
-            <div>
+            <div className='contact-form'>
                 <ContactForm />
                 <div className="socials-container">
                   <h4 className='socials-heading'>Check out our socials!</h4>

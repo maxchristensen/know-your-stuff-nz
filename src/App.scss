@@ -93,7 +93,7 @@ h6 {
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 100 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -255,7 +255,7 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30vw;
+  width: 31.6875rem;
   padding: 50px;
 }
 
@@ -267,7 +267,7 @@ h6 {
 }
 
 .hero-button {
-  width: 40%;
+  width: 22.6875rem;
   color: $white;
   font-size: 14pt;
   font-weight: 600;
@@ -314,6 +314,10 @@ h6 {
   justify-content: space-evenly;
   font-size: 16pt;
   font-weight: 300;
+}
+
+.donate-heading {
+  padding-left: 50px;
 }
 
 .stats-section {
@@ -385,21 +389,63 @@ h6 {
 }
 
 // Posts Styling
+.whats-happening-container{
+padding: 50px 100px 0 100px;
+}
+
 .stories-container {
   display: flex;
   width: 100vw;
   flex-wrap: wrap;
   flex-direction: row;
+}
 
+.post-container {
+  width: 27rem;
+}
+
+.post-container a {
+  text-decoration: none;
+  color: $black;
 }
 
 .latest-news-heading {
   color: $black;
   font-size: 36pt;
+  margin-bottom: 50px;
 }
 
 .story-image {
   width: 100%;
+}
+
+.story-title {
+  font-size: 2.25rem;
+}
+
+.story-title:hover {
+  cursor: pointer;
+}
+
+// Single Story Styling
+.single-post-container{
+  padding: 50px 300px 0 300px;
+}
+
+.post-title {
+  color: $orange;
+  width: 31vw;
+  font-size: 2.75rem;
+  margin-bottom: 2px;
+}
+
+.post-content {
+  width: 100%;
+}
+
+.post-content p {
+  letter-spacing: 0.03375rem;
+  margin-bottom: 30px;
 }
 
 // Store Styling
@@ -414,6 +460,77 @@ h6 {
 .donation-blurb {
   padding: 0 50px 0 50px;
   margin: 20px 0 20px 0;
+}
+
+.product-blurb-heading {
+  color: $black;
+  font-size: 2.25rem;
+  font-family: Archivo;
+  font-weight: 700;
+  line-height: 132%;
+  letter-spacing: 0.03375rem;
+  margin-bottom: 10px;
+}
+.product-container {
+  width: 56.4375rem;
+  height: 19.6875rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 50px 0 50px;
+}
+.product-container img {
+  width: 15rem;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.product-container h4 {
+  text-decoration: none;
+  color: $black;
+}
+
+.product-price {
+  margin-bottom: 10px;
+}
+
+.thank-you {
+  color: $orange;
+  font-size: 3rem;
+  font-family: Archivo;
+  font-weight: 700;
+  line-height: 132%;
+  letter-spacing: 0.045rem;
+}
+
+.why-donate-section {
+  padding: 0 50px 0 50px;
+  margin: 20px 0 20px 0;
+}
+
+.atc-button {
+  background-color: $green;
+  padding:  10px 20px 10px 20px;
+  color: $white;
+  width: 10rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 0.02813rem;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.atc-button:hover {
+  background-color: $orange;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.product-image {
+  width: 300px;
 }
 
 .product-link{
@@ -437,6 +554,54 @@ h6 {
   transition: all 0.3s ease;
 }
 
+// Pill Library Styling
+.pill-library-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 50px 0 50px;
+}
+
+.pill-library-info {
+  padding: 1.3rem;
+}
+
+.pill-library-heading {
+  margin-top: 20px;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+.pill-container {
+  display: flex;
+  flex-direction: column;
+  width: 28.75rem;
+  flex-shrink: 0;
+  background-color: $black;
+  color: $white;
+}
+
+.pill-container img {
+  padding: 0.25rem;
+}
+
+.pill-description p {
+  color: #FFF;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 300;
+  letter-spacing: 0.01875rem;
+}
+
+.pill-title {
+  color: #F4F5F5;
+  font-size: 2rem;
+  font-family: Archivo;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  margin-bottom: 10px;
+}
+
 // Footer Styling
 #contact-container {
   padding: 40px;
@@ -449,6 +614,10 @@ h6 {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+}
+
+.contact-form {
+  width: 18rem;
 }
 
 .short-field::placeholder,
@@ -473,7 +642,7 @@ h6 {
 .long-field {
   background-color: $white;
   border: none;
-  width: 15vw;
+  width: 100%;
 }
 
 .short-field {
@@ -502,7 +671,6 @@ h6 {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-
 
 .socials-heading {
   color: $white;
