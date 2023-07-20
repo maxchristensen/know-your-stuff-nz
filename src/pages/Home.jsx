@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 const Home = () => {
   return (
     <div className='master-container'>
-
      <div className="hero-section">
         <div className="tagline-cta">
             <h2 className='hero-tagline'>Do you <span id="fw-700"><i>really</i></span> know your stuff, New Zealand?</h2>
@@ -15,7 +14,7 @@ const Home = () => {
      </div>
 
      <div className="drugcheck-section">
-        <div className="mr-5 width-50">
+        <div className="width-50">
             <h2 className='drugcheck-heading'>What happens when I get my drugs checked?</h2>
             <img className='drugcheck-image' src="/drugcheck-image.jpeg" alt="" />
         </div>

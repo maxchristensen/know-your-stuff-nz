@@ -22,9 +22,6 @@ const Posts = () => {
         .catch((err) => console.log(err))
     })    
 
-    
-
-
     const AllPosts = ( {posts} ) => {        
         // console.log({posts})
         const mappedPosts = posts.map((story, index) => {
@@ -56,8 +53,6 @@ const Posts = () => {
             </>
         )
     }
-
-
 
   return (
     <>
