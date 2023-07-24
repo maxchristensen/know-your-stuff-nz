@@ -253,6 +253,31 @@ h6 {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  // WHO WE ARE
+  .staff-container {
+    flex-direction: column;
+  }
+
+  // DONATION {
+  .donation-container {
+    flex-direction: column;
+  }
+  
+  .donation-container .donation {
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid-container {
+    margin-bottom: 2rem;
+  }
+
+  .grid-container .product-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 7rem;
+  } 
 }
 
 // Home Styling
@@ -544,7 +569,7 @@ padding: 50px 100px 0 100px;
   color: $black;
 }
 
-.product-price {
+.product-price, .product-description {
   margin-bottom: 10px;
 }
 
